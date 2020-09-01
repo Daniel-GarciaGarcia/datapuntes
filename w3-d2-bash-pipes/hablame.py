@@ -55,7 +55,7 @@ def main(nombres, lang="es"):
         print(txt)
         sayText(txt,lang)
 
-# Run main fn
+# Run main fn -> Quiz: Why "__main__"?
 if __name__ == "__main__":
     lang = sys.argv[1]
     nombres = sys.argv[2:]
