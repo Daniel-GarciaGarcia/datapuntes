@@ -1,8 +1,10 @@
-
-from app import app
+import app
+print("SEGUNDA importacion")
+from saluda import saludaNombre
 
 def main():
     print("Hola Main",__name__)
-    app()
+    app.app()
+    saludaNombre()
 
 main()
