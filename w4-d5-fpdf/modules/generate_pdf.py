@@ -47,6 +47,6 @@ def pokepdf(pokemon):
         pdf.image(f"images/types/{typ}.png", pos[i], pdf.get_y()+15, w=40)
 
     # Export pdf
-    path = f"output/{pokemon['name']}.pdf"
+    path = f"output/{pokemon['id']}_{pokemon['name']}.pdf"
     pdf.output(path)
     print(f"pdf saved to {path}")

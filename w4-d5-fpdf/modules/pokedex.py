@@ -16,7 +16,7 @@ def get(name, id):
     data_add = requests.get(data["species"]["url"]).json()
 
     pokemon = {"id":data["id"],
-            "name":name,
+            "name":data["name"],
             "type":[typ["type"]["name"] for typ in data["types"]],
             "sprite_url":data["sprites"]["front_default"],
             "legendary": data_add["is_legendary"]}
