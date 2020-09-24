@@ -34,3 +34,17 @@ def searchCompanyV2(companyNameQuery):
         "searchQuery": companyNameQuery,
         "company": foundCompany
     }
+
+
+@app.route("/v2/ejemplo")
+@asJsonResponse
+def ejemplo(companyNameQuery):
+    return {
+        "hola":"adios"
+    }
+
+
+#(lambda x: print(x))("Hola")
+
+#e = lambda x: print(x)
+#e("Hola")

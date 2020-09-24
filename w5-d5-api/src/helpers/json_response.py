@@ -16,10 +16,12 @@ def asJsonResponse(fn):
     """
     Decorator to process data with bson serializer to avoid ObjectID to string errors in flask
     """
+    #print(fn.__name__)
     def wrapper(*args, **kwargs):
         data = fn(*args, **kwargs)
         if isinstance(data, tuple):
             return json_response(data[0]),data[1]
         else:
             return json_response(data)
+    wrapper.__name__ = fn.__name__
     return wrapper
